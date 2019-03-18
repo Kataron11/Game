@@ -13,6 +13,10 @@ public class Game {
         this.score = score;
     }
 
+    public Game(String title){
+        this.title = title;
+    }
+
     public String getStudio() {
         return studio;
     }

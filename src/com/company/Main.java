@@ -31,7 +31,7 @@ public class Main {
     }
     public void task(){
 
-        System.out.print("wyjdz, dodaj, wyswietl, wyszukaj: ");
+        System.out.print("wyjdz, dodaj, wyswietl, wyszukaj usun: ");
         String choose = getString();
         Controler controler = new Controler();
         while(!choose.equals("wyjdz")){
@@ -68,12 +68,17 @@ public class Main {
                         System.out.println("Brak elementów w bazie");
                     }
             }
+            else if(choose.equals("usun")){
+                System.out.print("Podaj nazwe gry: ");
+                String name = getString();
+                controler.deleteGame(name);
+            }
             else {
                 System.out.println("Zła liczba");
                 System.out.println(choose);
             }
 
-            System.out.print("wyjdz, dodaj, wyswietl, wyszukaj: ");
+            System.out.print("wyjdz, dodaj, wyswietl, wyszukaj, usun: ");
             choose=getString();
         }
 

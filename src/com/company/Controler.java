@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Controler {
@@ -15,6 +16,19 @@ public class Controler {
 
         games.add(g);
 
+    }
+
+    public void deleteGame(String name){
+
+        Iterator<Game> it = games.iterator();
+
+        while (it.hasNext()) {
+
+            Game g = it.next();
+            if(g.getTitle().equals(name))
+            it.remove();
+
+        }
     }
 
     public void showGame(){
